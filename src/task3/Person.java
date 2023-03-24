@@ -1,12 +1,12 @@
 package task3;
 
-public class Person {
+public abstract class Person {
 
-    private String name;
+    protected String name;
 
-    public Person(String theName){
+    public Person(String name){
 
-        this.name = theName;
+        this.name = name;
 
     }
 
@@ -14,13 +14,19 @@ public class Person {
         return name;
     }
 
-    public void setName(String theNewName) {
-        this.name = theNewName;
+    public void setName(String newName) {
+        this.name = newName;
     }
 
-    public boolean addCourse(String course){
+    /*public boolean addCourse(String course){
         return true;
-    }
+    }*/
+
+    public abstract boolean addCourse(String course);
+
+    /*to main
+    Person p1 = new Person("Signe");
+    p1.addCourse("Dat1")*/
 
 }
 
